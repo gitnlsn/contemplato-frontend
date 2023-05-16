@@ -12,11 +12,14 @@ const Home: React.FC = () => {
 
   const { data, onChange } = useLoginForm();
 
-  const onSubmit = useCallback((data: LoginFormData) => {
-    login(data)
-      .then(() => window.location.replace("/tasks"))
-      .catch(() => alert("Usuário ou senha incorretas."));
-  }, []);
+  const onSubmit = useCallback(
+    (data: LoginFormData) => {
+      login(data)
+        .then(() => window.location.replace("/tasks"))
+        .catch(() => alert("Usuário ou senha incorretas."));
+    },
+    [login]
+  );
 
   return (
     <section className={styles["main-section"]}>

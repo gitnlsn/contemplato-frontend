@@ -5,8 +5,8 @@ export const NavPages = [
     link: "/tasks",
   },
   {
-    id: "movies-page",
-    label: "Movies",
-    link: "/movies",
+    id: "pokemon-page",
+    label: "Pokemon",
+    link: "/pokemon",
   },
 ];

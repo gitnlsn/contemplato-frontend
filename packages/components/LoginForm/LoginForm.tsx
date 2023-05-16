@@ -23,7 +23,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
       event.preventDefault();
       onSubmit(data);
     },
-    [data]
+    [data, onSubmit]
   );
 
   const onChangeUsername: React.ChangeEventHandler<HTMLInputElement> =
@@ -54,6 +54,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
       className={styles["contemplato-login-form"]}
     >
       <Input
+        value={data?.username}
         ref={usernameInput}
         type="text"
         name="username"
@@ -63,6 +64,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
         required
       />
       <Input
+        value={data?.password}
         ref={passwordInput}
         type="password"
         name="password"
@@ -72,9 +74,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
         required
         minLength={8}
       />
-      <Button type="submit" style={{ textAlign: "center" }}>
-        Login
-      </Button>
+      <Button type="submit">Login</Button>
     </form>
   );
 };

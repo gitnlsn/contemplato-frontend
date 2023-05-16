@@ -1,0 +1,13 @@
+.pokemon-section {
+  height: 100vh;
+}
+
+.pokemon-cards-container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+}
