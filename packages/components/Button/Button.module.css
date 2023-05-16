@@ -1,0 +1,23 @@
+.contemplato-button {
+  all: unset;
+
+  cursor: pointer;
+
+  flex: 1;
+
+  padding: 4px 8px;
+
+  background-color: orange;
+  border-radius: 4px;
+  box-shadow: 1px 1px chocolate;
+
+  transition: 0.2s;
+}
+
+.contemplato-button:hover {
+  background-color: chocolate;
+}
+
+.contemplato-button:active {
+  background-color: chocolate;
+}
